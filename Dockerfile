@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER WangXian <xian366@126.com>
 
 
-
+RUN apk update
 
 WORKDIR /app
 VOLUME /app
