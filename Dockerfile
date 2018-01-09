@@ -7,7 +7,7 @@ RUN apk update
 WORKDIR /app
 VOLUME /app
 COPY startup.sh /startup.sh
-COPY mysql-plugins/* /usr/lib/mysql/plugin
+COPY mysql-plugins/calc_distance_udf.so /usr/lib/mysql/plugin/calc_distance_udf.so
 
 RUN apk add --update mysql mysql-client nfs-utils && rm -f /var/cache/apk/*
 COPY my.cnf /etc/mysql/my.cnf
