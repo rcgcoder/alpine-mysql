@@ -10,4 +10,4 @@ COPY mysql-plugins/calc_distance_udf.so /usr/lib/mysql/plugin/calc_distance_udf.
 COPY my.cnf /etc/mysql/my.cnf
 
 EXPOSE 3306
-#CMD ["/startup.sh"]
+CMD ["/startup.sh"]

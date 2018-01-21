@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Test push"
+echo "Test push ... new"
 
 if [ -d /app/mysql ]; then
   echo "[i] MySQL directory already present, skipping creation"
@@ -49,5 +49,8 @@ EOF
   rm -f $tfile
 fi
 
+if [ ! -d "/run/mysqld" ]; then
+    mkdir -p /run/mysqld
+fi
 
 exec /usr/bin/mysqld --user=root --console
